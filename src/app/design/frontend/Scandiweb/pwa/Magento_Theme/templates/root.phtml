@@ -1,0 +1,83 @@
+<?php
+    $colorConfig = $this->getThemeConfiguration('color_customization');
+    $contentConfig = $this->getThemeConfiguration('content_customization');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js');
+                });
+            }
+
+            window.actionName = {
+                type: `<?= $this->getAction(); ?>`
+            };
+
+            window.contentConfiguration = <?= json_encode($contentConfig) ?> || {};
+        </script>
+        <script async src="<?= $this->getStaticFile("assets/pwacompat.min.js"); ?>"></script>
+
+        <!-- TODO: Find or implement helper to generate fonts related code -->
+        <link rel="preload" href="<?= $this->getStaticFile("assets/font/Muli-Light.ttf"); ?>" as="font" type="font/ttf" crossorigin="">
+        <link rel="preload" href="<?= $this->getStaticFile("assets/font/Muli-Regular.ttf"); ?>" as="font" type="font/ttf" crossorigin="">
+        <link rel="preload" href="<?= $this->getStaticFile("assets/font/Muli-SemiBold.ttf"); ?>" as="font" type="font/ttf" crossorigin="">
+        <link rel="preload" href="<?= $this->getStaticFile("assets/font/Muli-Bold.ttf"); ?>" as="font" type="font/ttf" crossorigin="">
+
+        <style>
+            <?php if ($colorConfig['enable_color_customization']['enable_custom_colors'] !== "0"): ?>
+                <?php $colorArray = $colorConfig['primary_colors'] + $colorConfig['secondary_colors']; ?>
+                :root {
+                    <?php foreach ($colorArray as $code => $color): ?>
+                        <?php if (strpos($code, 'color') !== false): ?>
+                            <?= sprintf('--imported_%s: #%s;', $code, $color); ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                }
+            <?php endif; ?>
+
+            @font-face {
+                font-family: 'Muli';
+                font-weight: 300;
+                font-display: fallback;
+                src: local('Muli Light'), local('Muli-Light'), url(/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/assets/font/Muli-Light.ttf) format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Muli';
+                font-weight: normal;
+                font-display: fallback;
+                src: local('Muli Regular'), local('Muli-Regular'), url(/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/assets/font/Muli-Regular.ttf) format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Muli';
+                font-weight: 600;
+                font-display: fallback;
+                src: local('Muli SemiBold'), local('Muli-SemiBold'), url(/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/assets/font/Muli-SemiBold.ttf) format('truetype');
+            }
+
+            @font-face {
+                font-family: 'Muli';
+                font-weight: bold;
+                font-display: fallback;
+                src: local('Muli Bold'), local('Muli-Bold'), url(/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/assets/font/Muli-Bold.ttf) format('truetype');
+            }
+        </style>
+
+        <link rel="shortcut icon" href="<?= $this->getStaticFile("assets/favicon/favicon.ico"); ?>">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-title" content="ScandiPWA" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" /><meta name="theme-color" content="#ffffff" /><link rel="apple-touch-startup-image" sizes="640x640" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_640x640.fa48e3a0cdc83cf9623d40479525efa7.png" /><link rel="apple-touch-startup-image" sizes="750x750" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_750x750.911e5d5cc24d0f572f87c158bff3ddff.png" /><link rel="apple-touch-startup-image" sizes="1242x1242" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1242x1242.a4e68b47bc0e9119dd0e694810ca2337.png" /><link rel="apple-touch-startup-image" sizes="1125x1125" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1125x1125.5cd1ec8b21c7259c7fb7a38523d43928.png" /><link rel="apple-touch-startup-image" sizes="1536x1536" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1536x1536.9fee9601a8f13e4c1385e91a990d4f02.png" /><link rel="apple-touch-startup-image" sizes="1668x1668" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1668x1668.199d7e96719b74b064134c28f1dceeb5.png" /><link rel="apple-touch-startup-image" sizes="2048x2048" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_2048x2048.24f049542fac4e7c7f77f22ae5ff9453.png" /><link rel="apple-touch-icon" sizes="1024x1024" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1024x1024.2104eacc62d808a372bd7b8659b7cf65.png" /><link rel="apple-touch-icon" sizes="180x180" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_180x180.c080853d10edf2da36403b40a1c2e0b0.png" /><link rel="apple-touch-icon" sizes="167x167" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_167x167.beab0df3e22e8a12e87568be5fb8b0b4.png" /><link rel="apple-touch-icon" sizes="152x152" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_152x152.bb89919e8aae48100f4ae788f24cfca5.png" /><link rel="apple-touch-icon" sizes="120x120" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_120x120.35e3ad42ae5bf62fa34518ba6fd3ec9a.png" /><link rel="manifest" href="/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/manifest.9cbc0f85378b68a34798e7adff9fe497.json" /></head>
+
+    <body>
+        <noscript> You need to enable JavaScript to run this app. </noscript>
+        <div id="root"></div>
+        <script src="<?= $this->getStaticBundleFile() ?>"></script>
+    </body>
+</html>

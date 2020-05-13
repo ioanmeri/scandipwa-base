@@ -1,0 +1,108 @@
+{
+  "icons": [
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_512x512.d563d89c2d8cd1bd9946ceed49be8868.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_192x192.2dfbffe768b590b1e1ba714d3b59c691.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_144x144.28c966010b4b631cc6d70338722af967.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_96x96.38f627033aa46522b6203defb944684f.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_72x72.067b007271aa46ea3e867bb5335cd798.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_48x48.32362c586b2338c308abd875db931c87.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/android/icon_36x36.8d93b98ab0ae8029c70f4c820290527c.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_640x640.fa48e3a0cdc83cf9623d40479525efa7.png",
+      "sizes": "640x640",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_750x750.911e5d5cc24d0f572f87c158bff3ddff.png",
+      "sizes": "750x750",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1242x1242.a4e68b47bc0e9119dd0e694810ca2337.png",
+      "sizes": "1242x1242",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1125x1125.5cd1ec8b21c7259c7fb7a38523d43928.png",
+      "sizes": "1125x1125",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1536x1536.9fee9601a8f13e4c1385e91a990d4f02.png",
+      "sizes": "1536x1536",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1668x1668.199d7e96719b74b064134c28f1dceeb5.png",
+      "sizes": "1668x1668",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_2048x2048.24f049542fac4e7c7f77f22ae5ff9453.png",
+      "sizes": "2048x2048",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_1024x1024.2104eacc62d808a372bd7b8659b7cf65.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_180x180.c080853d10edf2da36403b40a1c2e0b0.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_167x167.beab0df3e22e8a12e87568be5fb8b0b4.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_152x152.bb89919e8aae48100f4ae788f24cfca5.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/version1589399197684/frontend/Scandiweb/pwa/en_US/Magento_Theme/icons/ios/icon_120x120.35e3ad42ae5bf62fa34518ba6fd3ec9a.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ],
+  "name": "ScandiPWA",
+  "short_name": "ScandiPWA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "ScandiPWA theme DEMO store",
+  "background_color": "#ffffff",
+  "lang": "en-US",
+  "theme_color": "#ffffff"
+}

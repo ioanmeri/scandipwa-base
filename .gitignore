@@ -1,0 +1,17 @@
+node_modules/
+opt/*
+
+src/*
+!src/vendor/
+!src/app/
+
+src/vendor/*
+!src/vendor/scandipwa/
+
+src/vendor/scandipwa/*
+!src/vendor/scandipwa/source/
+
+
+!src/composer.*
+!.gitignore
+!**/.gitkeep
